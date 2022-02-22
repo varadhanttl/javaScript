@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+.cor{
+font-size:60px;
+background-color:yellow;
+color:black;
+
+}
+
+.w{
+font-size:180px;
+color:white;
+background-color:blue;
+}
+
+.co{
+font-size:180px;
+background-color:yellow;
+color:black;
+}
+
+.coo{
+font-size:180px;
+background-color: pink;
+color:black;
+}
+
+
+</style>
+<script>
+x=0;
+function add(y){
+x=y+x;
+document.getElementById("dd").innerHTML = x;
+
+	if(x < 0){
+	document.getElementById("dd").classList.add("co");
+	document.getElementById("dd").classList.remove("coo");
+	}
+
+	else if(x > 0 ){
+	document.getElementById("dd").classList.remove("co");
+	document.getElementById("dd").classList.add("coo");
+
+	}
+	else if(x == 0){
+		document.getElementById("dd").classList.remove("co");
+		document.getElementById("dd").classList.remove("coo");
+		document.getElementById("dd").classList.add("w");
+		}
+
+		if(x >= 5 | x <= -5){
+			x =0;
+			}
+	
+}
+</script>
+</head>
+<body><center>
+<div>
+Add or sub by 1
+<div class="w" id="dd">0</div>
+<br><br>
+<div>
+<button class="cor" onClick="add(1)">add</button>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<button class="cor" onClick="add(-1)">sub</button>
+</center>
+</body>
+</html>
