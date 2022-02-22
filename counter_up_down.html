@@ -1,0 +1,46 @@
+<html>
+<head>
+
+<style>
+.co{
+color:red;
+font-size:180px;
+
+}
+
+</style>
+
+<script>
+var up = true;
+var value = 0;
+var increment = 1;
+var ceiling = 10;
+
+function PerformCalc()
+{
+if (up == true && value <= ceiling)
+{
+  value += increment
+
+  if (value == ceiling)
+  {up = false;}
+}
+else
+{
+    up = false
+    value -= increment;
+
+    if (value == 0)
+    {up = true;
+	}
+}
+
+ document.getElementById('counter').innerHTML =  value ;
+}
+setInterval(PerformCalc, 1000);
+</script>
+</head>
+<body><center>
+<div class="co" id="counter"></div>
+</body>
+</html>
